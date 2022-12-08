@@ -1,19 +1,20 @@
-package casbin;
+package org.casbin;
 
-import casbin.exceptions.File.CasbinModelConfFileNotFound;
-import casbin.exceptions.File.CasbinPolicyCSVFileNotFound;
-import casbin.exceptions.File.ModelFileIsEmptyException;
-import casbin.exceptions.File.PolicyFileIsEmptyException;
-import casbin.properties.CasbinExceptionProperties;
-import casbin.properties.CasbinProperties;
-import casbin.properties.JDBCConfigurationProperties;
-import casbin.properties.options.CasbinDataSourceInitializationMode;
-import casbin.properties.options.CasbinStoreType;
+
 import org.casbin.adapter.JDBCAdapter;
+import org.casbin.exceptions.File.CasbinModelConfFileNotFound;
+import org.casbin.exceptions.File.CasbinPolicyCSVFileNotFound;
+import org.casbin.exceptions.File.ModelFileIsEmptyException;
+import org.casbin.exceptions.File.PolicyFileIsEmptyException;
 import org.casbin.jcasbin.main.Enforcer;
 import org.casbin.jcasbin.model.Model;
 import org.casbin.jcasbin.persist.Adapter;
 import org.casbin.jcasbin.persist.file_adapter.FileAdapter;
+import org.casbin.properties.CasbinExceptionProperties;
+import org.casbin.properties.CasbinProperties;
+import org.casbin.properties.JDBCConfigurationProperties;
+import org.casbin.properties.options.CasbinDataSourceInitializationMode;
+import org.casbin.properties.options.CasbinStoreType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,7 +65,7 @@ public class CasbinEnforcer extends Enforcer {
         try {
             properties.couldResolveModelContext();
             return newModel(properties.getModel(), "");
-        } catch (CasbinModelConfFileNotFound | ModelFileIsEmptyException e) {
+        } catch (Exception e) {
             if (!properties.isUseDefaultModelIfModelNotSetting()) {
                 logger.info("Default Model setting is set to false, create model.conf file");
                 throw e;

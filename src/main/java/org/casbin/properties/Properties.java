@@ -1,4 +1,4 @@
-package casbin.properties;
+package org.casbin.properties;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;

@@ -1,4 +1,4 @@
-package casbin.exceptions.File;
+package org.casbin.exceptions.File;
 
 public class ModelFileIsEmptyException extends Exception {
     public ModelFileIsEmptyException() {

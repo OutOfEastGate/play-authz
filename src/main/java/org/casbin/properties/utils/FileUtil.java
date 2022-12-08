@@ -1,6 +1,6 @@
-package casbin.properties.utils;
+package org.casbin.properties.utils;
 
-import casbin.exceptions.File.FileIsEmptyException;
+import org.casbin.exceptions.File.FileIsEmptyException;
 
 import java.io.*;
 

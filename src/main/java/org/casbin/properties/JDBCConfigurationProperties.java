@@ -1,4 +1,4 @@
-package casbin.properties;
+package org.casbin.properties;
 
 
 import com.typesafe.config.Config;
@@ -10,6 +10,8 @@ import javax.inject.Singleton;
 public class JDBCConfigurationProperties extends Properties{
 
     private String username = (String) getValue("username", "");
+
+    private String url = (String) getValue("url", "");
 
     private String password = (String) getValue("password", "");
 
@@ -35,6 +37,10 @@ public class JDBCConfigurationProperties extends Properties{
         return driver;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
@@ -46,4 +52,9 @@ public class JDBCConfigurationProperties extends Properties{
     public void setDriver(String driver) {
         this.driver = driver;
     }
+
+    public void setUrl(String url) {
+         this.url = url;
+    }
+
 }

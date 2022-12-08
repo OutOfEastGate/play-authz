@@ -1,4 +1,4 @@
-package casbin.properties;
+package org.casbin.properties;
 
 public class CasbinExceptionProperties extends Properties{
     private boolean removePolicyFailed = (boolean) getValue("removePolicyFailed", false);

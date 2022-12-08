@@ -1,4 +1,4 @@
-package casbin.properties.options;
+package org.casbin.properties.options;
 
 public enum CasbinWatcherType {
     REDIS,

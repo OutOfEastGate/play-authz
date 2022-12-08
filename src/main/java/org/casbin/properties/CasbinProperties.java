@@ -1,11 +1,11 @@
-package casbin.properties;
+package org.casbin.properties;
 
-import casbin.exceptions.File.*;
-import casbin.properties.options.CasbinDataSourceInitializationMode;
-import casbin.properties.options.CasbinStoreType;
-import casbin.properties.options.CasbinWatcherType;
-import casbin.properties.utils.FileUtil;
 import com.typesafe.config.Config;
+import org.casbin.exceptions.File.*;
+import org.casbin.properties.options.CasbinDataSourceInitializationMode;
+import org.casbin.properties.options.CasbinStoreType;
+import org.casbin.properties.options.CasbinWatcherType;
+import org.casbin.properties.utils.FileUtil;
 
 import javax.inject.Singleton;
 import java.io.FileNotFoundException;
