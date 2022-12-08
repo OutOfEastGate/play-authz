@@ -30,7 +30,7 @@ public class PlayTest {
     public void testMysql() throws Exception {
         JDBCConfigurationProperties jdbcConfigurationProperties = new JDBCConfigurationProperties();
         jdbcConfigurationProperties.setDriver("com.mysql.cj.jdbc.Driver");
-        jdbcConfigurationProperties.setUrl("jdbc:mysql://localhost:3306/casbin?useSSL=false");
+        jdbcConfigurationProperties.setUrl("jdbc:mysql://127.0.0.1:3306/casbin?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true");
         jdbcConfigurationProperties.setUsername("casbin_test");
         jdbcConfigurationProperties.setPassword("TEST_casbin");
         CasbinEnforcer enforcer = new CasbinEnforcer(jdbcConfigurationProperties,new CasbinExceptionProperties());
